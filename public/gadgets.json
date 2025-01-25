@@ -1,0 +1,257 @@
+[
+    {
+      "product_id": 1,
+      "product_title": "Apple iPhone 15 Pro Max",
+      "product_image": "https://i.ibb.co.com/qY3w0Jt/i-Phone-15-Pro-Max-White-Titanium.png",
+      "category": "Smartphones",
+      "price": 1299,
+      "description": "Experience the ultimate smartphone with the iPhone 15 Pro Max.",
+      "specification": [
+        "6.7-inch Super Retina XDR display",
+        "A17 Bionic chip",
+        "Triple-camera system (48MP main, 12MP Telephoto, Ultrawide)",
+        "LiDAR scanner",
+        "Up to 2TB storage"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 2,
+      "product_title": "Samsung Galaxy S23 Ultra",
+      "product_image": "https://i.ibb.co.com/3pn3BqX/Galaxy-S23-Ultra.png",
+      "category": "Smartphones",
+      "price": 1199,
+      "description": "Redefine photography and performance with the Galaxy S23 Ultra.",
+      "specification": [
+        "6.8-inch Dynamic AMOLED 2X",
+        "Snapdragon 8 Gen 2",
+        "200MP quad-camera system",
+        "S Pen support",
+        "Up to 1TB storage"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": 3,
+      "product_title": "Google Pixel 8 Pro",
+      "product_image": "https://i.ibb.co.com/hYWM2tN/Google-Pixel-8-Pro-Obsidian-2.jpg",
+      "category": "Smartphones",
+      "price": 999,
+      "description": "Capture the moment with Google's AI-powered photography features.",
+      "specification": [
+        "6.7-inch LTPO OLED display",
+        "Google Tensor G3 chip",
+        "50MP wide, 48MP telephoto, 12MP ultrawide cameras",
+        "Titan M2 security chip",
+        "Up to 1TB storage"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 4,
+      "product_title": "Apple MacBook Pro 14-inch (M3 Pro)",
+      "product_image": "https://i.ibb.co.com/RDS1FFM/7-13.png",
+      "category": "Laptops",
+      "price": 2499,
+      "description": "Power meets portability with the new M3 Pro MacBook Pro.",
+      "specification": [
+        "14.2-inch Liquid Retina XDR display",
+        "M3 Pro chip",
+        "Up to 32GB RAM",
+        "Up to 8TB SSD",
+        "18 hours battery life"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": 5,
+      "product_title": "Dell XPS 13 Plus",
+      "product_image": "https://i.ibb.co.com/Xj45zsk/Dell-XPS-13-Plus-review-lead.jpg",
+      "category": "Laptops",
+      "price": 1899,
+      "description": "Sleek, powerful, and compact for everyday productivity.",
+      "specification": [
+        "13.4-inch OLED InfinityEdge display",
+        "12th Gen Intel Core i7",
+        "16GB RAM",
+        "1TB SSD",
+        "13-hour battery life"
+      ],
+      "availability": true,
+      "rating": 4.5
+    },
+    {
+      "product_id": 6,
+      "product_title": "Sony WH-1000XM5",
+      "product_image": "https://i.ibb.co.com/D7RqSDh/18057579d85a2c94d494865f1ec1bef2.jpg",
+      "category": "Headphones",
+      "price": 399,
+      "description": "Industry-leading noise cancellation and superior sound.",
+      "specification": [
+        "Wireless over-ear headphones",
+        "30-hour battery life",
+        "Quick charge for 3 hours playback in 10 minutes",
+        "Customizable sound with Sony Headphones Connect app",
+        "Multi-point connection"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 7,
+      "product_title": "Bose QuietComfort 45",
+      "product_image": "https://i.ibb.co.com/vB4Vjrc/QC45-PDP-Ecom-Gallery-W02customm.jpg",
+      "category": "Headphones",
+      "price": 329,
+      "description": "Unparalleled comfort and premium sound quality.",
+      "specification": [
+        "Wireless over-ear headphones",
+        "Active Noise Cancelling (ANC)",
+        "24-hour battery life",
+        "Lightweight design",
+        "USB-C fast charging"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": 8,
+      "product_title": "Samsung Galaxy Watch 6",
+      "product_image": "https://i.ibb.co.com/1Zm91wx/GW6-family-01-configurator-800x6.jpg",
+      "category": "Smartwatches",
+      "price": 399,
+      "description": "Your health companion with advanced fitness tracking.",
+      "specification": [
+        "1.4-inch Super AMOLED display",
+        "Advanced sleep tracking",
+        "Heart rate monitor",
+        "Up to 3 days battery life",
+        "Wear OS by Google"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 9,
+      "product_title": "Apple Watch Series 9",
+      "product_image": "https://i.ibb.co.com/fkpyvh8/SERIES9-STAINLESS-800x800.jpg",
+      "category": "Smartwatches",
+      "price": 499,
+      "description": "The ultimate health and fitness watch.",
+      "specification": [
+        "Always-on Retina display",
+        "Temperature sensing",
+        "Crash detection",
+        "Fast charge capability",
+        "WatchOS 10"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 10,
+      "product_title": "Sony PlayStation 5",
+      "product_image": "https://i.ibb.co.com/pXgTrw2/61v-R3ovb2-UL-SL1500.jpg",
+      "category": "Gaming Consoles",
+      "price": 499,
+      "description": "Play without limits with the PlayStation 5.",
+      "specification": [
+        "Custom AMD Zen 2 CPU",
+        "825GB SSD",
+        "8K graphics support",
+        "DualSense wireless controller",
+        "Ray tracing support"
+      ],
+      "availability": true,
+      "rating": 4.9
+    },
+    {
+      "product_id": 11,
+      "product_title": "Microsoft Xbox Series X",
+      "product_image": "https://i.ibb.co.com/St9Ly6y/microsoft-xbox-series-x-16gb-mem.jpg",
+      "category": "Gaming Consoles",
+      "price": 499,
+      "description": "The fastest, most powerful Xbox ever built.",
+      "specification": [
+        "8-Core AMD Zen 2 processor",
+        "1TB SSD",
+        "12 teraflops GPU",
+        "4K gaming at 120 FPS",
+        "Dolby Vision and Dolby Atmos support"
+      ],
+      "availability": true,
+      "rating": 4.8
+    },
+    {
+      "product_id": 12,
+      "product_title": "DJI Mini 3 Pro",
+      "product_image": "https://i.ibb.co.com/ZMqc14T/jolksjf-754x691.jpg",
+      "category": "Drones",
+      "price": 749,
+      "description": "Compact, powerful drone with professional features.",
+      "specification": [
+        "4K HDR video",
+        "Tri-directional obstacle sensing",
+        "Extended battery life",
+        "Lightweight (249g)",
+        "12km video transmission"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": 13,
+      "product_title": "Amazon Echo Dot (5th Gen)",
+      "product_image": "https://example.com/echodot5.jpg",
+      "category": "Smart Home",
+      "price": 49,
+      "description": "Your compact smart speaker with Alexa.",
+      "specification": [
+        "Compact design",
+        "Improved sound quality",
+        "Smart home integration",
+        "LED display for time and alarms",
+        "Voice assistant support"
+      ],
+      "availability": true,
+      "rating": 4.6
+    },
+    {
+      "product_id": 14,
+      "product_title": "Google Nest Hub (2nd Gen)",
+      "product_image": "https://example.com/nesthub2.jpg",
+      "category": "Smart Home",
+      "price": 99,
+      "description": "Your connected home at a glance.",
+      "specification": [
+        "7-inch touchscreen display",
+        "Sleep sensing technology",
+        "Smart home control",
+        "Built-in Google Assistant",
+        "Stereo speakers"
+      ],
+      "availability": true,
+      "rating": 4.7
+    },
+    {
+      "product_id": 15,
+      "product_title": "Apple iPad Air (5th Gen)",
+      "product_image": "https://example.com/ipadair5.jpg",
+      "category": "Tablets",
+      "price": 599,
+      "description": "Power and versatility with the M1 chip.",
+      "specification": [
+        "10.9-inch Liquid Retina display",
+        "Apple M1 chip",
+        "12MP Ultra Wide front camera",
+        "5G capable",
+        "Up to 256GB storage"
+      ],
+      "availability": true,
+      "rating": 4.8
+    }]
+  
