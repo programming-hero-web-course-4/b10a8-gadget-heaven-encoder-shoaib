@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import Banner from "../Banner/Banner";
 import { Outlet } from "react-router-dom";
+import { ToastContainer } from 'react-toastify';
 const Root = () => {
   return (
     <div className="bg-white min-h-screen">
@@ -11,6 +12,7 @@ const Root = () => {
         <Banner></Banner>
         <Outlet></Outlet>
       </div>
+      <ToastContainer />
     </div>
   );
 };
