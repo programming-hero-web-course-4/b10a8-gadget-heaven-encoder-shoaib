@@ -90,7 +90,7 @@ const Gadgets = () => {
 
                 {/* Product page */}
                 {!showLaptops && (
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 border">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-5   ">
                         {gadgets.map(gadget => (
                             <Gadget key={gadget.product_id} gadget={gadget}></Gadget>
                         ))}
@@ -105,7 +105,7 @@ const Gadgets = () => {
                                 <NoDataFound></NoDataFound>
                             )
                         }
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 border">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 ">
                         {laptops.map(laptop => (
                             <Laptops key={laptop.product_id} gadget={laptop}></Laptops>
                         ))}
