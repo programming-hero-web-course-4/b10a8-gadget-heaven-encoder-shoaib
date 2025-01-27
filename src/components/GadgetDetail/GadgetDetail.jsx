@@ -1,26 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { CiShoppingCart } from "react-icons/ci";
 import { GiSelfLove } from "react-icons/gi";
+import { CardContext } from "../Root/Root";
 
 const GadgetDetail = () => {
-  const { product_id } = useParams();
-  const data = useLoaderData();
-  console.log(product_id);
-  console.log(data);
+    const { product_id } = useParams();
+    const data = useLoaderData();
+    console.log(product_id);
+    console.log(data);
+  
+    const gadget = data.find((gadget) => gadget.product_id == product_id);
+    console.log(gadget);
+  
+    const {
+      product_title,
+      product_image,
+      price,
+      availability,
+      description,
+      specification,
+      rating,
+    } = gadget;
+    const handleGetProductId  = useContext(CardContext)[4]
+    const handleLoveCount  = useContext(CardContext)[3]
 
-  const gadget = data.find((gadget) => gadget.product_id == product_id);
-  console.log(gadget);
-
-  const {
-    product_title,
-    product_image,
-    price,
-    availability,
-    description,
-    specification,
-    rating,
-  } = gadget;
   return (
       <div className="flex justify-center gap-10 pb-20">
         <div className=" w-[500px] h-[500px] border shadow-xl rounded-2xl bg-gray-200 P-9">
@@ -98,12 +102,12 @@ const GadgetDetail = () => {
             <p className="text-black  bg-gray-100 rounded-xl px-3">{rating}</p>
           </div>
 
-          <div className="flex gap-4 py-2">
-            <button className="btn btn-active btn-primary rounded-2xl px-3"> 
+          <div  className="flex gap-4 py-2">
+            <button onClick={()=>handleGetProductId(product_id)} className="btn btn-active btn-primary rounded-2xl px-3"> 
                 Add To Card
                 <span className="text-white text-xl"><CiShoppingCart /></span>
             </button>
-            <button className="bg-white border rounded-full p-2"><span className="text-xl font-bold text-amber-600 "><GiSelfLove /></span></button>
+            <button onClick={handleLoveCount} className="bg-white border rounded-full p-2"><span className="text-xl font-bold text-amber-600 "><GiSelfLove /></span></button>
           </div>
         </div>
       </div>

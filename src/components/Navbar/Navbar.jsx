@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { CiShoppingCart } from "react-icons/ci";
 import { GiSelfLove } from "react-icons/gi";
+import { CardContext } from "../Root/Root";
 
 const Navbar = () => {
+
+  const count  = useContext(CardContext)[0]
+  const loveCount  = useContext(CardContext)[2]
+
+
+
   const links = (
     <>
       <li>
@@ -30,7 +37,7 @@ const Navbar = () => {
       
       <li>
         <NavLink
-          to="/dashboard"
+          to="/ListProduct/:product_id"
           className={({ isActive }) =>
             isActive ? "text-blue-500 font-semibold" : "hover:text-blue-500"
           }
@@ -88,13 +95,19 @@ const Navbar = () => {
           to=""
           className="text-2xl"
         >
-          <CiShoppingCart />
+          <div className="flex justify-center  ">
+          <CiShoppingCart /> 
+          <span className="text-sm">{count}</span>
+          </div>
         </NavLink>
         <NavLink
           to=""
           className="text-2xl"
         >
-          <GiSelfLove />
+          <div className="flex justify-center  ">
+            <GiSelfLove />
+            <span className="text-sm">{loveCount}</span>
+          </div>
         </NavLink>
       </div>
 

@@ -9,6 +9,7 @@ import Root from './components/Root/Root';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Gadgets from './components/Gadgets/Gadgets';
 import GadgetDetail from './components/GadgetDetail/GadgetDetail';
+import Dashboard from './components/Dashboard/Dashboard';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
       {
         path:"/product/:product_id",
         element: <GadgetDetail></GadgetDetail>,
+        loader:()=>fetch('/gadgets.json'),
+      },
+      {
+        path:"/ListProduct/:product_id",
+        element: <Dashboard></Dashboard>,
         loader:()=>fetch('/gadgets.json'),
       },
     ],
