@@ -106,7 +106,8 @@ const Gadgets = () => {
                             )
                         }
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 ">
-                        {laptops.map(laptop => (
+                        {
+                        laptops.map(laptop => (
                             <Laptops key={laptop.product_id} gadget={laptop}></Laptops>
                         ))}
                         </div>
