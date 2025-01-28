@@ -23,7 +23,9 @@ const GadgetDetail = () => {
       rating,
     } = gadget;
     const handleGetProductId  = useContext(CardContext)[4]
-    const handleLoveCount  = useContext(CardContext)[3]
+    // const handleLoveCount  = useContext(CardContext)[3]
+    const handleGetProductIdForWishList  = useContext(CardContext)[7]
+
 
   return (
       <div className="flex justify-center gap-10 pb-20">
@@ -107,7 +109,7 @@ const GadgetDetail = () => {
                 Add To Card
                 <span className="text-white text-xl"><CiShoppingCart /></span>
             </button>
-            <button onClick={handleLoveCount} className="bg-white border rounded-full p-2"><span className="text-xl font-bold text-amber-600 "><GiSelfLove /></span></button>
+            <button onClick={()=>handleGetProductIdForWishList(product_id)} className="bg-white border rounded-full p-2"><span className="text-xl font-bold text-amber-600 "><GiSelfLove /></span></button>
           </div>
         </div>
       </div>

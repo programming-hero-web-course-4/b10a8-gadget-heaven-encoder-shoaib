@@ -11,6 +11,7 @@ const Root = () => {
   const [cardCount, setCardCount] = useState(0);
   const [loveCount, setLoveCount] = useState(0);
   const [productId, setProductId] = useState([]);
+  const [wishProductId, setWishProductId] = useState([]);
 
   const handleAddToCardCount = () => {
     setCardCount((prevCount) => prevCount + 1);
@@ -24,24 +25,57 @@ const Root = () => {
 
     const id = parseInt(idx)
     if(productId.includes(id)){
-      toast('Id already exist')
+          // Show toast notification
+          toast.warning("Gadget already exist!", {
+            position: "top-center",
+            autoClose: 3000,
+          });
       return;
     }
     else{
       setProductId((prevProductIds) => [...prevProductIds, id]);
       handleAddToCardCount();
+          // Show toast notification
+          toast.success("Gadget Added in cart!", {
+            position: "top-center",
+            autoClose: 3000,
+          });
+    }
+  };
+  
+  // get id from wishlist
+  const handleGetProductIdForWishList = (idx) => {
+
+    const id = parseInt(idx)
+    if(wishProductId.includes(id)){
+          // Show toast notification
+          toast.warning("Gadget already exist!", {
+            position: "top-center",
+            autoClose: 3000,
+          });
+      return;
+    }
+    else{
+      setWishProductId((prevProductIds) => [...prevProductIds, id]);
+      handleAddToLoveCount();
+
+          // Show toast notification
+          toast.success("Gadget Added in WishList!", {
+            position: "top-center",
+            autoClose: 3000,
+          });
     }
   };
 
-  console.log(productId)
-  // const handleGadgetAddToCard = (id)
+  // console.log(productId);
+
+
 
   return (
     <div className="bg-white min-h-screen">
       <div className="bg-white py-5"></div>
 
-      {/* Passing both `addToCard` and `handleAddToCard` in an object */}
-      <CardContext.Provider value={[ cardCount, handleAddToCardCount ,loveCount ,handleAddToLoveCount ,handleGetProductId,productId ]}>
+      <CardContext.Provider value={[ cardCount, handleAddToCardCount ,setCardCount ,handleAddToLoveCount ,handleGetProductId,productId  ,wishProductId,handleGetProductIdForWishList,loveCount,setLoveCount]}>
         <div className="max-w-11/12 mx-auto">
           <Navbar />
           <Banner />

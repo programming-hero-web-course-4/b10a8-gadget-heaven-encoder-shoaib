@@ -7,7 +7,7 @@ import { CardContext } from "../Root/Root";
 const Navbar = () => {
 
   const count  = useContext(CardContext)[0]
-  const loveCount  = useContext(CardContext)[2]
+  const loveCount  = useContext(CardContext)[8]
 
 
 

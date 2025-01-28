@@ -1,19 +1,15 @@
 import React, { useContext } from "react";
-import { LuDelete } from "react-icons/lu";
 import { toast } from "react-toastify";
+import { LuDelete } from "react-icons/lu";
 import { CardContext } from "../Root/Root";
 
-const ShowAddCardGadgets = ({ gadget, gadgets, setGadgets }) => {
+const WishListGadget = ({ wishGadget, wishGadgets, setWishGadgets }) => {
+    const setLoveCount = useContext(CardContext)[9]
 
-  const setCardCount  = useContext(CardContext)[2];
-
-  // Delete gadget function
   const handleDeleteGadget = (id) => {
-    console.log(id)
-    const remainingGadgets = gadgets.filter((g) => g.product_id !== id);
-    setGadgets(remainingGadgets); 
-    setCardCount(((prevCount) => prevCount - 1))
-    
+    const remainingGadgets = wishGadgets.filter((gadget) => gadget.product_id !== id);
+    setWishGadgets(remainingGadgets);
+    setLoveCount((prevCount) => prevCount - 1);
 
     // Show toast notification
     toast.success("Gadget deleted!", {
@@ -22,31 +18,32 @@ const ShowAddCardGadgets = ({ gadget, gadgets, setGadgets }) => {
     });
   };
 
+      const handleGetProductId  = useContext(CardContext)[4]
+
   return (
     <div>
-
-
       <div className="mb-4 p-4 border rounded shadow">
         <div className="flex justify-between items-center">
           <div className="flex gap-5">
             <div>
               <img
                 className="w-[100px] rounded-2xl shadow-xl"
-                src={gadget.product_image}
+                src={wishGadget.product_image}
                 alt=""
               />
             </div>
             <div>
               <h2 className="text-2xl font-bold pb-3 text-black">
-                {gadget.product_title}
+                {wishGadget.product_title}
               </h2>
-              <p className="text-gray-600 font-bold">Price: ${gadget.price}</p>
-              <p className="text-gray-500">{gadget.description}</p>
+              <p className="text-gray-600 font-bold">Price: ${wishGadget.price}</p>
+              <p className="text-gray-500">{wishGadget.description}</p>
+              <button onClick={()=>handleGetProductId(wishGadget.product_id)} className="text-[#a032cb] text-md font-bold border rounded-full px-3 py-1 mt-2">Add To Card</button>
             </div>
           </div>
           <div>
             <button
-              onClick={() => handleDeleteGadget(gadget.product_id)}
+              onClick={() => handleDeleteGadget(wishGadget.product_id)}
               className="text-3xl text-red-400"
             >
               <LuDelete />
@@ -58,4 +55,4 @@ const ShowAddCardGadgets = ({ gadget, gadgets, setGadgets }) => {
   );
 };
 
-export default ShowAddCardGadgets;
+export default WishListGadget;
