@@ -59,14 +59,12 @@ const Dashboard = () => {
     });
   };
 
-  //   console.log(gadgets.price)
-
   return (
-    <div>
+    <div className="relative -top-27 border rounded-2xl max-w-7xl mx-auto px-4 sm:px-14 py-4 pb-7 bg-purple-100">
       {/* Toggle Buttons */}
-      <div className="flex justify-center items-center gap-4 my-7">
+      <div className="flex justify-center items-center gap-4 flex-col sm:flex-row">
         <button
-          className={`text-2xl rounded-xl border px-4 font-bold ${
+          className={`text-2xl rounded-xl border px-4 font-bold py-2 w-full sm:w-auto ${
             activeButton === "Cart"
               ? "bg-orange-100 text-amber-600"
               : "text-black"
@@ -76,7 +74,7 @@ const Dashboard = () => {
           Cart
         </button>
         <button
-          className={`text-2xl rounded-xl border px-4 font-bold ${
+          className={`text-2xl rounded-xl border px-4 font-bold py-2 w-full sm:w-auto ${
             activeButton === "Wishlist"
               ? "bg-orange-100 text-amber-600"
               : "text-black"
@@ -89,48 +87,43 @@ const Dashboard = () => {
 
       {/* Cart Section */}
       {activeButton === "Cart" && (
-        <div>
-          <div className="flex justify-between items-center my-10">
-            <div>
-              <h1 className="text-3xl text-purple-500 font-bold">Cart</h1>
-            </div>
-            <div>
-              <div className="flex justify-center items-center gap-6">
-                <h1 className="text-black font-bold text-lg">
-                  Total Cost:{" "}
-                  <span className="text-emerald-500 font-semibold ">
-                    $
-                    {gadgets
-                      .reduce((total, gadget) => total + gadget.price, 0)
-                      .toFixed(2)}
-                  </span>
-                </h1>
+        <div className="mt-10 sm:mt-28">
+          <div className="flex flex-col sm:flex-row justify-between items-center my-6">
+            <h1 className="text-3xl text-purple-500 font-bold">Cart</h1>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-4 sm:mt-0">
+              <h1 className="text-black font-bold text-lg">
+                Total Cost:{" "}
+                <span className="text-emerald-500 font-semibold">
+                  ${gadgets
+                    .reduce((total, gadget) => total + gadget.price, 0)
+                    .toFixed(2)}
+                </span>
+              </h1>
 
-                <details className="dropdown">
-                  <summary className="btn m-1 text-black text-lg font-bold border-pink-500 rounded-2xl bg-white">
-                    Sort By Price <LiaSortSolid />{" "}
-                  </summary>
-                  <ul className="menu dropdown-content bg-gray-100 rounded-2xl  z-[1] w-52 p-2 shadow text-[#0f3cce]">
-                    <li>
-                      <a onClick={handleSortByPriceAscendingOrder}>
-                        Ascending Order
-                      </a>
-                    </li>
-                    <li>
-                      <a onClick={handleSortByPriceDescendingOrder}>
-                        Descending Order
-                      </a>
-                    </li>
-                  </ul>
-                </details>
+              <details className="dropdown">
+                <summary className="btn m-1 text-black text-lg font-bold border-pink-500 rounded-2xl bg-white">
+                  Sort By Price <LiaSortSolid />
+                </summary>
+                <ul className="menu dropdown-content bg-gray-100 rounded-2xl z-[1] w-52 p-2 shadow text-[#0f3cce]">
+                  <li>
+                    <a onClick={handleSortByPriceAscendingOrder}>
+                      Ascending Order
+                    </a>
+                  </li>
+                  <li>
+                    <a onClick={handleSortByPriceDescendingOrder}>
+                      Descending Order
+                    </a>
+                  </li>
+                </ul>
+              </details>
 
-                <button
-                  onClick={handlePurchaseButton}
-                  className="font-bold text-lg rounded-2xl  py-1  px-4 bg-[#49da32]  text-white"
-                >
-                  Purchase
-                </button>
-              </div>
+              <button
+                onClick={handlePurchaseButton}
+                className="font-bold text-lg rounded-2xl py-2 px-6 bg-[#49da32] text-white w-full sm:w-auto"
+              >
+                Purchase
+              </button>
             </div>
           </div>
           <div>
@@ -149,7 +142,7 @@ const Dashboard = () => {
       {/* Wishlist Section */}
       {activeButton === "Wishlist" && (
         <div>
-          <h1 className="text-xl text-black font-bold">Wishlist</h1>
+          <h1 className="text-xl text-black font-bold text-center md:text-start mt-3">Wishlist</h1>
           <div>
             {wishGadgets.map((wishGadget, idx) => (
               <WishListGadget

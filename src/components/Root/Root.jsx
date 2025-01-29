@@ -68,14 +68,32 @@ const Root = () => {
   };
 
 
+  // hide banner page 
+
+  const [showBanner, setShowBanner] = useState(true);
+
+  const handleDashboardClick = (word) => {
+    if(word == 'Statistics'){
+    setShowBanner(false); 
+    }
+    if(word == 'Dashboard'){
+    setShowBanner(false); 
+    }
+    if(word == 'Home'){
+    setShowBanner(true); 
+    }
+    
+  };
+
+
   return (
     <div className="bg-white min-h-screen">
       <div className="bg-white py-5"></div>
 
-      <CardContext.Provider value={[ cardCount, handleAddToCardCount ,setCardCount ,handleAddToLoveCount ,handleGetProductId,productId  ,wishProductId,handleGetProductIdForWishList,loveCount,setLoveCount ]}>
+      <CardContext.Provider value={[ cardCount, handleAddToCardCount ,setCardCount ,handleAddToLoveCount ,handleGetProductId,productId  ,wishProductId,handleGetProductIdForWishList,loveCount,setLoveCount,handleDashboardClick ]}>
         <div className="max-w-11/12 mx-auto">
-          <Navbar />
-          <Banner />
+          <Navbar  handleDashboardClick = {handleDashboardClick}></Navbar>
+          <Banner showBanner = {showBanner}></Banner>
           <Outlet />
         </div>
       </CardContext.Provider>

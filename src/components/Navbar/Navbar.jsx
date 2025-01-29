@@ -4,7 +4,7 @@ import { CiShoppingCart } from "react-icons/ci";
 import { GiSelfLove } from "react-icons/gi";
 import { CardContext } from "../Root/Root";
 
-const Navbar = () => {
+const Navbar = ({handleDashboardClick}) => {
 
   const count  = useContext(CardContext)[0]
   const loveCount  = useContext(CardContext)[8]
@@ -13,8 +13,9 @@ const Navbar = () => {
 
   const links = (
     <>
-      <li>
+      <li className="text-white">
         <NavLink
+        onClick={() => handleDashboardClick('Home')}
           to="/"
           className={({ isActive }) =>
             isActive ? "text-blue-500 font-semibold" : "hover:text-blue-500"
@@ -24,8 +25,9 @@ const Navbar = () => {
         </NavLink>
       </li>
 
-      <li>
+      <li className="text-white">
         <NavLink
+        onClick={() => handleDashboardClick("Statistics")}
           to="/statistics"
           className={({ isActive }) =>
             isActive ? "text-blue-500 font-semibold" : "hover:text-blue-500"
@@ -35,8 +37,9 @@ const Navbar = () => {
         </NavLink>
       </li>
       
-      <li>
+      <li className="text-white">
         <NavLink
+        onClick={() => handleDashboardClick("Dashboard")}
           to="/ListProduct/:product_id"
           className={({ isActive }) =>
             isActive ? "text-blue-500 font-semibold" : "hover:text-blue-500"
@@ -76,12 +79,12 @@ const Navbar = () => {
           </button>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-purple-400 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             {links}
           </ul>
         </div>
-        <NavLink to="/" className="text-2xl font-bold text-white">
+        <NavLink to="/" className="md:text-2xl font-bold text-white">
         Gadget Heaven
         </NavLink>
       </div>

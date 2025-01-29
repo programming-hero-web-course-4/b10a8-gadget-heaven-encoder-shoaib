@@ -28,14 +28,15 @@ const router = createBrowserRouter([
         element: <GadgetDetail></GadgetDetail>,
         loader:()=>fetch('/gadgets.json'),
       },
-      {
-        path:"/statistics",
-        element:<Statistics></Statistics>
-      },
+
       {
         path:"/ListProduct/:product_id",
         element: <Dashboard></Dashboard>,
         loader:()=>fetch('/gadgets.json'),
+      },
+      {
+        path:"/statistics",
+        element:<Statistics></Statistics>
       },
     ],
   },

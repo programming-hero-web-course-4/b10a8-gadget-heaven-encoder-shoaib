@@ -42,48 +42,48 @@ const Gadgets = () => {
       <h1 className="flex justify-center items-center text-5xl font-bold text-black w-full text-center mb-8">
         Explore Cutting-Edge Gadgets
       </h1>
-      <div className="md:flex gap-10 md:m-14 ">
-        <section className="md:flex md:flex-col justify-center md:justify-start ms-10 md:ms-0 w-[400px]">
-          <div className="sticky top-44 grid grid-cols-1 gap-4 border md:p-7 rounded-2xl shadow mb-7 md:mb-1">
+      <div className="md:flex gap-10 md:m-14  ">
+        <section className="md:flex md:flex-col justify-center md:justify-start ms-10 md:ms-0 md:w-[400px]">
+          <div className="sticky top-44 grid grid-cols-1 gap-4 border md:p-7 rounded-2xl shadow mb-7 md:mb-1 ">
             <button
               onClick={handleShowAll}
-              className="text-xl text-white font-bold bg-[#8a35d1] p-2 rounded-xl"
+              className="text-xl text-white font-bold bg-[#8a35d1] p-2 w-full rounded-xl"
             >
               All Products
             </button>
             <button
               onClick={() => handleLaptops("Laptops")}
-              className="text-xl text-black font-bold py-3 w-full bg-gray-200 rounded-xl"
+              className="text-xl text-black font-bold py-3 w-full  bg-gray-200 rounded-xl"
             >
               Laptops
             </button>
             <button
               onClick={() => handleLaptops("Smartphones")}
-              className="text-xl text-black font-bold py-3 w-full bg-gray-200 rounded-xl"
+              className="text-xl text-black font-bold py-3 w-full  bg-gray-200 rounded-xl"
             >
               Phones
             </button>
             <button
               onClick={() => handleLaptops("Accessories")}
-              className="text-xl text-black font-bold py-3 w-full bg-gray-200 rounded-xl"
+              className="text-xl text-black font-bold py-3 w-full   bg-gray-200 rounded-xl"
             >
               Accessories
             </button>
             <button
               onClick={() => handleLaptops("Smartwatches")}
-              className="text-xl text-black font-bold py-3 w-full bg-gray-200 rounded-xl"
+              className="text-xl text-black font-bold py-3 w-full  bg-gray-200 rounded-xl"
             >
               Smart Watches
             </button>
             <button
               onClick={() => handleBySpecificModel("MacBook", "Laptops")}
-              className="text-xl text-black font-bold py-3 w-full bg-gray-200 rounded-xl"
+              className="text-xl text-black font-bold py-3 w-full   bg-gray-200 rounded-xl"
             >
               MacBook
             </button>
             <button
               onClick={() => handleBySpecificModel("iPhone", "Smartphones")}
-              className="text-xl text-black font-bold py-3 w-full bg-gray-200 rounded-xl"
+              className="text-xl text-black font-bold py-3 w-full   bg-gray-200 rounded-xl"
             >
               iPhone
             </button>
