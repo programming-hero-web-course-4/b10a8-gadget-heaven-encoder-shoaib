@@ -67,16 +67,6 @@ const Root = () => {
     }
   };
 
-  // console.log(productId);
-  // const [price, setPrice] = useState(0);
-
-  // const handelPrice = (newPrice) => {
-  //   setPrice(price + newPrice);
-  // };
-  
-  // console.log(price)
-
-
 
   return (
     <div className="bg-white min-h-screen">

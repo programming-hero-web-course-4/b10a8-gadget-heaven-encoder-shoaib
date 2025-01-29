@@ -7,7 +7,7 @@ const Banner = () => {
       <div className="w-full max-w-[1062px] border-8 bg-gray-200 p-4 rounded-2xl">
         <div className="shadow-lg flex justify-center rounded-2xl">
           <img
-            className="rounded-xl object-cover w-full md:h-[563px]"
+            className="rounded-xl object-cover w-full md:h-[503px]"
             src={bannerImg}
             alt="Beautiful banner"
           />
