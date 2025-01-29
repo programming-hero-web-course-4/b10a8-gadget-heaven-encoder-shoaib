@@ -9,7 +9,7 @@ const ShowAddCardGadgets = ({ gadget, gadgets, setGadgets }) => {
 
   // Delete gadget function
   const handleDeleteGadget = (id) => {
-    console.log(id)
+    // console.log(id)
     const remainingGadgets = gadgets.filter((g) => g.product_id !== id);
     setGadgets(remainingGadgets); 
     setCardCount(((prevCount) => prevCount - 1))
@@ -21,9 +21,10 @@ const ShowAddCardGadgets = ({ gadget, gadgets, setGadgets }) => {
       autoClose: 3000,
     });
   };
-
+ 
   return (
     <div>
+      
 
 
       <div className="mb-4 p-4 border rounded shadow">
@@ -59,3 +60,5 @@ const ShowAddCardGadgets = ({ gadget, gadgets, setGadgets }) => {
 };
 
 export default ShowAddCardGadgets;
+
+

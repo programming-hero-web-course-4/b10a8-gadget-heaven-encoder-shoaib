@@ -7,11 +7,11 @@ import { CardContext } from "../Root/Root";
 const GadgetDetail = () => {
     const { product_id } = useParams();
     const data = useLoaderData();
-    console.log(product_id);
-    console.log(data);
+    // console.log(product_id);
+    // console.log(data);
   
     const gadget = data.find((gadget) => gadget.product_id == product_id);
-    console.log(gadget);
+    // console.log(gadget);
   
     const {
       product_title,
@@ -25,6 +25,8 @@ const GadgetDetail = () => {
     const handleGetProductId  = useContext(CardContext)[4]
     // const handleLoveCount  = useContext(CardContext)[3]
     const handleGetProductIdForWishList  = useContext(CardContext)[7]
+
+  
 
 
   return (

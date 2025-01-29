@@ -10,6 +10,7 @@ const Dashboard = () => {
   const ids = useContext(CardContext)[5];
   const wishId = useContext(CardContext)[6];
 
+
   const { product_id } = useParams();
   const data = useLoaderData();
 
@@ -22,6 +23,15 @@ const Dashboard = () => {
   const [wishGadgets, setWishGadgets] = useState(
     data.filter((gadget) => wishId.includes(gadget.product_id))
   );
+
+  // Sort by Price function 
+  const handleSortByPrice = () => {
+    const sortedGadgets = [...gadgets].sort((a, b) => a.price - b.price);
+    setGadgets(sortedGadgets);
+  }
+
+
+//   console.log(gadgets.price)
 
   return (
     <div>
@@ -54,8 +64,13 @@ const Dashboard = () => {
             </div>
             <div>
               <div className="flex gap-6">
-                <h1 className="text-black font-bold">Total Cost: </h1>
-                <button className="text-black font-bold">Sort by Price</button>
+                <h1 className="text-black font-bold">
+                  Total Cost:{" "}
+                  <span className="text-black font-normal">
+                    ${gadgets.reduce((total, gadget) => total + gadget.price, 0).toFixed(2)}
+                  </span>
+                </h1>
+                <button onClick={handleSortByPrice} className="text-black font-bold">Sort by Price</button>
                 <button className="text-black font-bold">Purchase</button>
               </div>
             </div>

@@ -68,6 +68,13 @@ const Root = () => {
   };
 
   // console.log(productId);
+  // const [price, setPrice] = useState(0);
+
+  // const handelPrice = (newPrice) => {
+  //   setPrice(price + newPrice);
+  // };
+  
+  // console.log(price)
 
 
 
@@ -75,7 +82,7 @@ const Root = () => {
     <div className="bg-white min-h-screen">
       <div className="bg-white py-5"></div>
 
-      <CardContext.Provider value={[ cardCount, handleAddToCardCount ,setCardCount ,handleAddToLoveCount ,handleGetProductId,productId  ,wishProductId,handleGetProductIdForWishList,loveCount,setLoveCount]}>
+      <CardContext.Provider value={[ cardCount, handleAddToCardCount ,setCardCount ,handleAddToLoveCount ,handleGetProductId,productId  ,wishProductId,handleGetProductIdForWishList,loveCount,setLoveCount ]}>
         <div className="max-w-11/12 mx-auto">
           <Navbar />
           <Banner />

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Laptops = ({gadget}) => {
-    console.log(gadget)
+    // console.log(gadget)
     const {product_id,product_title, product_image, price} = gadget;
     return (
         <div className='border rounded-2xl shadow-lg p-4 bg-gray-100'>
