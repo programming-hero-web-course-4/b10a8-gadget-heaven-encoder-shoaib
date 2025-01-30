@@ -102,7 +102,7 @@ const GadgetDetail = () => {
             <p className="text-black bg-gray-100 rounded-xl px-3">{rating}</p>
           </div>
 
-          <div className="flex gap-4 py-2">
+          <div className="md:flex gap-4 py-2">
             <button
               onClick={() => handleGetProductId(product_id)}
               className="btn btn-active btn-primary rounded-2xl px-3 w-full md:w-auto"
@@ -114,9 +114,9 @@ const GadgetDetail = () => {
             </button>
             <button
               onClick={() => handleGetProductIdForWishList(product_id)}
-              className="bg-white border rounded-full p-2"
+              className="bg-white border rounded-full p-2  md:mt-0 mt-5 "
             >
-              <span className="text-xl font-bold text-amber-600">
+              <span className="text-xl font-bold text-amber-600 text-center ">
                 <GiSelfLove />
               </span>
             </button>

@@ -11,6 +11,7 @@ import Gadgets from './components/Gadgets/Gadgets';
 import GadgetDetail from './components/GadgetDetail/GadgetDetail';
 import Dashboard from './components/Dashboard/Dashboard';
 import Statistics from './components/Statistics/Statistics';
+import WishListGadget from './components/WishListGadget/WishListGadget';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path:"/statistics",
         element:<Statistics></Statistics>
+      },
+      {
+        path:"/wishList",
+        element:<WishListGadget></WishListGadget>,
       },
     ],
   },

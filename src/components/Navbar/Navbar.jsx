@@ -8,6 +8,7 @@ const Navbar = ({handleDashboardClick}) => {
 
   const count  = useContext(CardContext)[0]
   const loveCount  = useContext(CardContext)[8]
+  // const handleDashboardClick = useContext(CardContext)[10]
 
 
 
@@ -95,7 +96,8 @@ const Navbar = ({handleDashboardClick}) => {
 
       <div className="navbar-end space-x-6">
         <NavLink
-          to=""
+          onClick={()=>handleDashboardClick('Dashboard')}
+          to="/ListProduct/:product_id"
           className="text-2xl"
         >
           <div className="flex justify-center  ">
@@ -104,7 +106,8 @@ const Navbar = ({handleDashboardClick}) => {
           </div>
         </NavLink>
         <NavLink
-          to=""
+          to="/ListProduct/:product_id"
+          onClick={()=>handleDashboardClick('Dashboard')}
           className="text-2xl"
         >
           <div className="flex justify-center  ">

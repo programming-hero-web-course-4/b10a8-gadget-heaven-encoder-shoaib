@@ -206,7 +206,7 @@
     {
       "product_id": 13,
       "product_title": "Amazon Echo Dot (5th Gen)",
-      "product_image": "https://example.com/echodot5.jpg",
+      "product_image": "https://i.ibb.co.com/mCTYnsM0/Amazon-Echo-Dot-5-review-weather.jpg",
       "category": "Smart Home",
       "price": 49,
       "description": "Your compact smart speaker with Alexa.",
@@ -223,7 +223,7 @@
     {
       "product_id": 14,
       "product_title": "Google Nest Hub (2nd Gen)",
-      "product_image": "https://example.com/nesthub2.jpg",
+      "product_image": "https://i.ibb.co.com/7xsVY8nG/66796161c396b8065b662954-google.jpg",
       "category": "Smart Home",
       "price": 99,
       "description": "Your connected home at a glance.",
@@ -240,7 +240,7 @@
     {
       "product_id": 15,
       "product_title": "Apple iPad Air (5th Gen)",
-      "product_image": "https://example.com/ipadair5.jpg",
+      "product_image": "https://i.ibb.co.com/DD6yrx3s/Apple-i-Pad-Air-hero-color-lineup.png",
       "category": "Tablets",
       "price": 599,
       "description": "Power and versatility with the M1 chip.",

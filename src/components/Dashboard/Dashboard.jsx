@@ -5,6 +5,7 @@ import ShowAddCardGadgets from "../ShowAddCardGadgets/ShowAddCardGadgets";
 import WishListGadget from "../WishListGadget/WishListGadget";
 import { LiaSortSolid } from "react-icons/lia";
 import { toast } from "react-toastify";
+import successImg from '../../assets/image/Group.png'
 
 const Dashboard = () => {
   const [activeButton, setActiveButton] = useState("Cart");
@@ -52,12 +53,21 @@ const Dashboard = () => {
     setLoveCount(0);
     setGadgets([]);
     setWishGadgets([]);
-    // Show toast notification
-    toast.success("Purchase Successful!", {
-      position: "top-center",
-      autoClose: 3000,
-    });
   };
+
+  const calculateTotal = (gadgets) => {
+    gadgets.reduce((total, gadget) => total + gadget.price, 0).toFixed(2);
+  };
+  // for modal
+
+  const handlePurchaseButtonModal = (id) => {
+    document.getElementById(id).showModal();
+    handlePurchaseButton();
+  };
+
+  // const closeModal = () => {
+  //   setIsModalOpen(false);
+  // };
 
   return (
     <div className="relative -top-27 border rounded-2xl max-w-7xl mx-auto px-4 sm:px-14 py-4 pb-7 bg-purple-100">
@@ -94,7 +104,8 @@ const Dashboard = () => {
               <h1 className="text-black font-bold text-lg">
                 Total Cost:{" "}
                 <span className="text-emerald-500 font-semibold">
-                  ${gadgets
+                  $
+                  {gadgets
                     .reduce((total, gadget) => total + gadget.price, 0)
                     .toFixed(2)}
                 </span>
@@ -117,15 +128,53 @@ const Dashboard = () => {
                   </li>
                 </ul>
               </details>
+              {/* modal button  */}
 
-              <button
-                onClick={handlePurchaseButton}
-                className="font-bold text-lg rounded-2xl py-2 px-6 bg-[#49da32] text-white w-full sm:w-auto"
-              >
-                Purchase
-              </button>
+
+
+              <div >
+                <button
+                  className=" font-bold text-lg rounded-2xl py-2 px-6 bg-[#49da32] text-white w-full sm:w-auto"
+                  onClick={() => handlePurchaseButtonModal("my_modal_1")}
+                >
+                  Purchase
+                </button>
+                <dialog id="my_modal_1" className="modal">
+                  <div className="modal-box bg-white shadow flex flex-col  justify-center items-center">
+                    <div className="pb-4">
+                      <img src={successImg} alt="" />
+                    </div>
+                    <div>
+                    <h3 className=" text-2xl font-bold text-black border-b pb-3 px-6">Payment Successfully</h3>
+                    <p className="text-black pt-2 text-center">Thanks for purchasing</p>
+                    </div>
+                    <div className="flex justify-center items-center gap-3">
+                      <div>
+                        <h1 className="text-black font-bold text-lg">Total:</h1>
+                      </div>
+                      <div>
+                        <p className="py-4 text-black">
+                          $
+                          {gadgets
+                            .reduce((total, gadget) => total + gadget.price, 0)
+                            .toFixed(2)}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="modal-action">
+                      <form method="dialog">
+                        {/* if there is a button in form, it will close the modal */}
+                        <button className="rounded-md py-3 px-32 bg-blue-400">Close</button>
+                      </form>
+                    </div> 
+                  </div>
+                </dialog>
+              </div>
             </div>
           </div>
+
+
+
           <div>
             {gadgets.map((gadget, idx) => (
               <ShowAddCardGadgets
@@ -142,7 +191,9 @@ const Dashboard = () => {
       {/* Wishlist Section */}
       {activeButton === "Wishlist" && (
         <div>
-          <h1 className="text-xl text-black font-bold text-center md:text-start mt-3">Wishlist</h1>
+          <h1 className="text-xl text-black font-bold text-center md:text-start mt-3">
+            Wishlist
+          </h1>
           <div>
             {wishGadgets.map((wishGadget, idx) => (
               <WishListGadget
