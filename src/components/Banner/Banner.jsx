@@ -1,7 +1,10 @@
 import React from "react";
 import bannerImg from "../../assets/image/banner.jpg";
+import { useLocation } from "react-router-dom";
 
 const Banner = ({showBanner}) => {
+
+
   return (
     <div className={`px-4 md:px-16 flex justify-center relative -top-32 mb-14 ${!showBanner ? "hidden" : ""}`}>
       <div className="w-full max-w-[1062px] border-8 bg-gray-200 p-4 rounded-2xl">

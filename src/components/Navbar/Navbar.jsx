@@ -8,7 +8,10 @@ const Navbar = ({handleDashboardClick}) => {
 
   const count  = useContext(CardContext)[0]
   const loveCount  = useContext(CardContext)[8]
+  const navColor  = useContext(CardContext)[11]
   // const handleDashboardClick = useContext(CardContext)[10]
+
+  console.log(navColor)
 
 
 
@@ -49,13 +52,24 @@ const Navbar = ({handleDashboardClick}) => {
           Dashboard
         </NavLink>
       </li>
+      <li className="text-white">
+        <NavLink
+        onClick={() => handleDashboardClick("Dashboard")}
+          to="/offer"
+          className={({ isActive }) =>
+            isActive ? "text-blue-500 font-semibold" : "hover:text-blue-500"
+          }
+        >
+          Offer Gadgets
+        </NavLink>
+      </li> 
 
     </>
   );
 
   return (
     <div className=" bg-[#a032cb] shadow-lg px-4 md:px-16 rounded-2xl ">
-          <div className="navbar  ">
+      <div className={` navbar ${navColor ? "bg-gray-500 relative -top-16 mt-10 rounded-2xl" : ""}`}>
       <div className="navbar-start">
         <div className="dropdown">
           <button

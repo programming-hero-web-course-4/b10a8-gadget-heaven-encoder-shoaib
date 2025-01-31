@@ -1,9 +1,10 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Banner from "../Banner/Banner";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import Footer from "../Footer/Footer";
+import favicon from "../../assets/image/favicon-16x16.png";
 
 export const CardContext = createContext();
 
@@ -85,12 +86,34 @@ const Root = () => {
     
   };
 
+  // change background color 
+  const [navColor, setNavColor] = useState(false);
+
+    const location = useLocation();
+    useEffect(() => {
+      if (location.pathname.startsWith("/ListProduct/:product_id")) {
+        setNavColor(true);
+      } else {
+        setNavColor(false);
+      }
+    }, [location.pathname]);
+
+
+
+    useEffect(() => {
+      document.title = "Gadget-Hub";
+    }, []);
+  
+  
+  
+
+
 
   return (
     <div className="bg-white min-h-screen">
       <div className="bg-white py-5"></div>
 
-      <CardContext.Provider value={[ cardCount, handleAddToCardCount ,setCardCount ,handleAddToLoveCount ,handleGetProductId,productId  ,wishProductId,handleGetProductIdForWishList,loveCount,setLoveCount,handleDashboardClick ]}>
+      <CardContext.Provider value={[ cardCount, handleAddToCardCount ,setCardCount ,handleAddToLoveCount ,handleGetProductId,productId  ,wishProductId,handleGetProductIdForWishList,loveCount,setLoveCount,handleDashboardClick ,navColor]}>
         <div className="max-w-11/12 mx-auto">
           <Navbar  handleDashboardClick = {handleDashboardClick}></Navbar>
           <Banner showBanner = {showBanner}></Banner>
