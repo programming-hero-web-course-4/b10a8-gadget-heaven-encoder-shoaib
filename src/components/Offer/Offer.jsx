@@ -26,7 +26,7 @@ const Offer = () => {
   return (
     <div>
       <h1 className="flex justify-center items-center text-5xl font-bold text-emerald-600 w-full text-center mb-8 mt-5">
-        Exclusive 20% Off on Selected Gadgets
+        Exclusive 30% Off on Selected Gadgets
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:m-14">

@@ -4,7 +4,7 @@ import Banner from "../Banner/Banner";
 import { Outlet, useLocation } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import Footer from "../Footer/Footer";
-import favicon from "../../assets/image/favicon-16x16.png";
+
 
 export const CardContext = createContext();
 
@@ -99,7 +99,7 @@ const Root = () => {
     }, [location.pathname]);
 
 
-
+    // change window title 
     useEffect(() => {
       document.title = "Gadget-Hub";
     }, []);
@@ -110,11 +110,12 @@ const Root = () => {
 
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen "
+    style={{ fontFamily: "Sora, serif" }}>
       <div className="bg-white py-5"></div>
 
       <CardContext.Provider value={[ cardCount, handleAddToCardCount ,setCardCount ,handleAddToLoveCount ,handleGetProductId,productId  ,wishProductId,handleGetProductIdForWishList,loveCount,setLoveCount,handleDashboardClick ,navColor]}>
-        <div className="max-w-11/12 mx-auto">
+        <div className="max-w-11/12 mx-auto ">
           <Navbar  handleDashboardClick = {handleDashboardClick}></Navbar>
           <Banner showBanner = {showBanner}></Banner>
           <Outlet />
